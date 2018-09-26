@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
-    resources :tweets, only: :index
+    resources :tweets, only: [:index, :create]
     get 'search', to: 'tweets#search'
   end
 
